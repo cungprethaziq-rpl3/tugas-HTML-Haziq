@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profil sekolah</title>
+    <style>
+        body { font-family: arial; padding: 30px; background: white; color: black;}
+        body.gelap { background: rgb(10, 10, 10); color: bisque;}
+    </style>
+</head>
+<body>
+    <h1>SMK Maju Jaya</h1>
+    <p>Jurusan rekayasa perangkat lunak</p>
+    <button id='btnTema'>mode gelap</button>
+
+    <script>
+        const btnTema = document.getElementById('btnTema');
+
+        btnTema.addEventListener('click', () => {
+            document.body.classList.toggle('gelap');
+
+            if (document.body.classList.contains('gelap')){
+                btnTema.textContent = 'mode terang';
+            }   else {
+                btnTema.textContent = 'tema gelap';
+            }
+        })
+    </script>
+</body>
+</html>
